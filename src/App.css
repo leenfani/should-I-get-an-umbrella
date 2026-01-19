@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* custom fonts */
+
+@font-face {
+  font-family: Playpen;
+  src: url(../public/fonts/Playpen_Sans_Arabic/PlaypenSansArabic-VariableFont_wght.ttf);
+}
