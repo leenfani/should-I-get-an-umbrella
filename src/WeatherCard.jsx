@@ -42,7 +42,7 @@ export default function WeatherCard() {
               </Typography>
             </Grid>
 
-            {/* details */}
+            {/* weather details */}
             <Grid size={6}>
               <Typography variant="h1">38</Typography>
               <Typography variant="h6">broken clouds</Typography>
@@ -53,7 +53,7 @@ export default function WeatherCard() {
               </Box>
             </Grid>
 
-            {/* icon */}
+            {/* cloud icon */}
             <Grid size={6} display="flex" justifyContent="center">
               <CloudIcon sx={{ fontSize: 200 }} />
             </Grid>
