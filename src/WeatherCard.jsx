@@ -1,9 +1,19 @@
+// REACT
+
+import { useEffect } from "react";
+
+// MUI
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 import CloudIcon from "@mui/icons-material/Cloud";
 import { Button } from "@mui/material";
+
+// EXTERNAL
+import axios from "axios";
+
+
 
 export default function WeatherCard() {
   return (
