@@ -1,7 +1,3 @@
-// REACT
-
-import { useEffect } from "react";
-
 // MUI
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -10,12 +6,7 @@ import { Grid } from "@mui/material";
 import CloudIcon from "@mui/icons-material/Cloud";
 import { Button } from "@mui/material";
 
-// EXTERNAL
-import axios from "axios";
-
-
-
-export default function WeatherCard() {
+export default function WeatherCard({ temp }) {
   return (
     <Box
       minHeight="100vh"
@@ -54,7 +45,9 @@ export default function WeatherCard() {
 
             {/* weather details */}
             <Grid size={6}>
-              <Typography variant="h1">38</Typography>
+              <Typography variant="h1">
+                {temp !== null ? `${temp}°` : "..."}
+              </Typography>
               <Typography variant="h6">broken clouds</Typography>
 
               <Box display="flex" gap={1}>
