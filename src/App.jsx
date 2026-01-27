@@ -1,6 +1,6 @@
 import "./App.css";
 import { UseTheme } from "./Theme";
-import WeatherCard from "./Weathercard";
+import WeatherCard from "./WeatherCard"
 
 // EXTERNAL
 import { useApi } from "./customHooks/useApi";
