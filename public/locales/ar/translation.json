@@ -1,0 +1,16 @@
+{
+  "title": "هل أحتاج لمظلة؟",
+  "language": "اللغة",
+
+  "weather": {
+    "min": "صغرى",
+    "max": "كبرى"
+  },
+
+  "city": {
+    "london": "لندن"
+  },
+  "button": {
+    "toggleLang": "English"
+  }
+}

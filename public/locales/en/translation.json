@@ -1,0 +1,15 @@
+{
+  "title": "Should I get an umbrella?",
+  "language": "Language",
+
+  "weather": {
+    "min": "Low",
+    "max": "High"
+  },
+  "city": {
+    "london": "London"
+  },
+  "button": {
+    "toggleLang": "العربية"
+  }
+}

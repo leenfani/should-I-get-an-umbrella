@@ -6,11 +6,11 @@ import WeatherCard from "./Weathercard";
 import { useApi } from "./customHooks/useApi";
 
 function App() {
-  const {temp} = useApi()
+  const {temp, weatherMessage} = useApi()
   return (
     <>
       <UseTheme>
-        <WeatherCard temp={temp}/>
+        <WeatherCard temp={temp} weatherMessage={weatherMessage}/>
       </UseTheme>
     </>
   );
