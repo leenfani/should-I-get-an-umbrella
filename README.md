@@ -77,3 +77,10 @@ https://shouldigetanumbrella.netlify.app
 
 ### Arabic Version
 ![Arabic UI](./screenshots/arabic.png)
+
+---
+
+## Notes
+
+This project focuses on logic-driven UI, localization, and real-world API integration.  
+It demonstrates how to approach real product requirements using React and modern frontend tools.
