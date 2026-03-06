@@ -1,9 +1,11 @@
 import { ThemeProvider, createTheme } from "@mui/material";
+import { ReactNode } from "react";
 const theme = createTheme({
   typography: {
-    fontFamily: ["Playpen"],
+    fontFamily: "Playpen",
   },
 });
-export function UseTheme({ children }) {
+
+export function UseTheme({ children }: { children: ReactNode }) {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }

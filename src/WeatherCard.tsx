@@ -65,7 +65,7 @@ export default function WeatherCard({ temp, weatherMessage }: WeatherPrps) {
                   {temp.current !== null ? `${temp.current}°` : "..."}
                 </Typography>
                 <Typography variant="h4">
-                  <img src={temp.responseicon ?? ""} />
+                  {temp.responseicon && <img src={temp.responseicon} />}
                 </Typography>
               </Grid>
 
