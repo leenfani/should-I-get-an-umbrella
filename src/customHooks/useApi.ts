@@ -6,10 +6,12 @@ import { useEffect, useState, useMemo } from "react";
 
 import axios from "axios";
 import { useLanguage } from "./useLanguage";
+import { WeatherMessage, WeatherState } from "../types/weather";
 
 export function useApi() {
   const { isAr } = useLanguage();
-  const [temp, setTemp] = useState({
+
+  const [temp, setTemp] = useState<WeatherState>({
     current: null,
     min: null,
     max: null,
@@ -51,7 +53,7 @@ export function useApi() {
       controller.abort();
     };
   }, [isAr]);
-  const weatherMessage = useMemo(() => {
+  const weatherMessage = useMemo((): WeatherMessage | null => {
     const id = temp.conditionId;
     if (!id) return null;
 

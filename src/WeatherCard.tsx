@@ -11,8 +11,14 @@ import AlertTitle from "@mui/material/AlertTitle";
 // EXTERNAL
 import { useDate } from "./customHooks/useDate";
 import { useLanguage } from "./customHooks/useLanguage";
+import { WeatherMessage, WeatherState } from "./types/weather";
 
-export default function WeatherCard({ temp, weatherMessage }) {
+interface WeatherPrps {
+  temp: WeatherState;
+  weatherMessage: WeatherMessage | null;
+}
+
+export default function WeatherCard({ temp, weatherMessage }: WeatherPrps) {
   const { t, toggleLanguage, isAr } = useLanguage();
   const { dayName, monthYear } = useDate(isAr ? "ar" : "en");
   return (
@@ -59,7 +65,7 @@ export default function WeatherCard({ temp, weatherMessage }) {
                   {temp.current !== null ? `${temp.current}°` : "..."}
                 </Typography>
                 <Typography variant="h4">
-                  <img src={temp.responseicon} />
+                  {temp.responseicon && <img src={temp.responseicon} />}
                 </Typography>
               </Grid>
 
@@ -87,7 +93,7 @@ export default function WeatherCard({ temp, weatherMessage }) {
           </Grid>
           {/* weather massage */}
           {weatherMessage && (
-            <Grid size={12} sx={{ mt: 1, pb: 1, }}>
+            <Grid size={12} sx={{ mt: 1, pb: 1 }}>
               <Alert
                 icon={false}
                 severity={weatherMessage.type || "info"}
