@@ -30,7 +30,7 @@ The alert content changes dynamically depending on the weather condition:
 
 - Storm: alerts the user that an umbrella is not sufficient
 - Rain: suggests taking an umbrella
-- snow: remind to take the polar coat
+- Snow: remind to take the polar coat
 - Clear weather: indicates that no umbrella is needed
 
 All alerts are localized in both Arabic and English and in a funny language to improve the UX.
@@ -40,7 +40,7 @@ All alerts are localized in both Arabic and English and in a funny language to i
 ## Tech Stack
 
 - React
-- JavaScript (ES6+)
+- TypeScript
 - OpenWeather API
 - Material UI (MUI)
 - Day.js
@@ -60,6 +60,18 @@ All alerts are localized in both Arabic and English and in a funny language to i
   - AbortController for cancelling in-flight API requests
 - Clean separation between UI and logic
 - Prevents unnecessary API calls when the component unmounts or dependencies change
+- Shared types and interfaces in `src/types/weather.ts`
+
+---
+
+## TypeScript
+
+This project was migrated from JavaScript to TypeScript. Key decisions:
+
+- Shared interfaces (`WeatherState`, `WeatherMessage`) extracted to `src/types/weather.ts`
+- All components and hooks typed with explicit interfaces
+- MUI `severity` prop typed as a union type instead of `string`
+- `ReactNode` used for component `children` props
 
 ---
 
@@ -73,9 +85,11 @@ https://shouldigetanumbrella.netlify.app
 ## Screenshots
 
 ### English Version
+
 ![English UI](./screenshots/english.png)
 
 ### Arabic Version
+
 ![Arabic UI](./screenshots/arabic.png)
 
 ---
